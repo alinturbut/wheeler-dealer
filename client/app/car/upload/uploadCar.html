@@ -1,6 +1,6 @@
 <div class="container">
-    <div class="row">
-        <form ng-app="wheelerDealerApp" ng-controller="CarUploadController" name="form">
+    <div class="row" ng-controller="CarUploadController">
+        <form ng-app="wheelerDealerApp" name="form">
             <div class="btn btn-default" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
                  ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
                  ngf-resize="{width: 200, height: 200}">Choose a file</div>
