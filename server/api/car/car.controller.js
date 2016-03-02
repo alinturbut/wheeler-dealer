@@ -1,6 +1,5 @@
 'use strict';
 
-var Car = require('./car.model.js');
 var fs = require('fs');
 var path = require('path');
 
@@ -27,8 +26,9 @@ function uploadFile(file, newPath) {
 
 export function uploadCarFunction(req, res) {
     var file = req.files.file;
-    var newPath = path.resolve(__dirname + "\\..\\..\\..\\data\\uploads\\" + file.name);
+    var newPath = path.resolve(__dirname + "\\..\\..\\..\\client\\assets\\images\\uploads\\" + file.name);
     console.log("Uploading file:" + newPath);
     uploadFile(file, newPath);
     res.header("path", newPath);
+    res.end();
 }

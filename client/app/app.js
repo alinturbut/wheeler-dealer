@@ -4,13 +4,15 @@ angular.module('wheelerDealerApp', [
   'wheelerDealerApp.auth',
   'wheelerDealerApp.admin',
   'wheelerDealerApp.constants',
+  'wheelerDealerApp.uploadCar',
   'ngCookies',
   'ngResource',
   'ngSanitize',
   'ngRoute',
   'ui.bootstrap',
   'validation.match',
-  'ngFileUpload'
+  'ngFileUpload',
+  'ngImgCrop'
 ])
   .config(function($routeProvider, $locationProvider) {
     $routeProvider

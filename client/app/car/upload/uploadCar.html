@@ -1,11 +1,23 @@
 <div class="container">
     <div class="row" ng-controller="CarUploadController">
         <form ng-app="wheelerDealerApp" name="form">
-            <div class="btn btn-default" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
-                 ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
-                 ngf-resize="{width: 200, height: 200}">Choose a file</div>
+            <div id="fileInput" class="btn btn-default" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
+                 ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100">Choose a file</div>
             <img ngf-thumbnail="file || 'assets/images/thumb.jpg'" style="width:40px; height:40px;"> <br>
             <button type="submit" class="btn" style="margin-top:15px;" ng-click="submit()">Submit</button>
         </form>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-3">
+          <div class="cropArea">
+            <!--<img-crop ng-src="{{path}}" image="myImage" result-image="myCroppedImage"/>-->
+              <img ng-src="{{path}}" />
+          </div>
+          <div>Cropped Image:</div>
+          <div>
+            <img ng-src="{{myCroppedImage}}" />
+          </div>
+        </div>
+      </div>
+
     </div>
 </div>
