@@ -1,4 +1,4 @@
 # wheeler-dealer
-An open-source project that wants to help car junkies visualize the new rim on their car.
+An open-source project that wants to help car junkies visualize the new rims in town on their car.
 
-It based on the mean stack.
+It is based on the mean stack.
